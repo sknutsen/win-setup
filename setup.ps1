@@ -2,7 +2,7 @@
 winget install --id=Git.Git -e
 winget install --id=Microsoft.VisualStudio.2022.Enterprise -e
 winget install --id=Axosoft.GitKraken -e
-winget install --id=Microsoft.SQLServer.2022.Express  -e
+winget install --id=Microsoft.SQLServer.2022.Express  -e --locale en-US
 winget install --id=Microsoft.SQLServerManagementStudio  -e
 winget install --id=Figma.Figma  -e
 winget install --id=Microsoft.Teams -e
