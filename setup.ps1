@@ -208,12 +208,12 @@ Write-Host 'Accepting winget source agreements...'
 
 # --- Mandatory ---
 Install-WingetPackage -Id 'Git.Git'
-Install-WingetPackage -Id 'Microsoft.VisualStudio.2022.Enterprise' -Override '--passive --wait --includeRecommended --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.Data'
+Install-WingetPackage -Id 'Microsoft.VisualStudio.Enterprise' -Override '--passive --wait --includeRecommended --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.Data --add Microsoft.VisualStudio.Component.Wcf.Tooling'
 Install-WingetPackage -Id 'Anthropic.ClaudeCode'
 Install-WingetPackage -Id 'Axosoft.GitKraken'
-# Developer edition: full engine, free for non-production. Swap to Microsoft.SQLServer.2022.Express if you prefer Express.
-Install-WingetPackage -Id 'Microsoft.SQLServer.2022.Developer' -Locale 'en-US'
-Install-WingetPackage -Id 'Microsoft.SQLServerManagementStudio.21'
+# Developer edition: full engine, free for non-production. Swap to Microsoft.SQLServer.2025.Express if you prefer Express.
+Install-WingetPackage -Id 'Microsoft.SQLServer.2025.Developer' -Locale 'en-US'
+Install-WingetPackage -Id 'Microsoft.SQLServerManagementStudio.22'
 Install-WingetPackage -Id 'Figma.Figma'
 Install-WingetPackage -Id 'Microsoft.Teams'
 Install-WingetPackage -Id '7zip.7zip'

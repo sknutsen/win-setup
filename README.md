@@ -38,16 +38,16 @@ The first NixOS rebuild from GitHub can take a long time.
 ### Windows (winget)
 
 - Git, GitKraken, GitHub CLI
-- Visual Studio 2022 Enterprise (Managed Desktop, ASP.NET, Azure, Data workloads + recommended components)
+- Visual Studio 2026 Enterprise (Managed Desktop, ASP.NET, Azure, Data workloads + recommended components + WCF tooling)
 - Claude Code
-- SQL Server 2022 **Developer** (full engine, not for production) and SSMS 21
+- SQL Server 2025 **Developer** (full engine, not for production) and SSMS 22
 - Azure CLI, Azure VPN Client, Azure Functions Core Tools
-- .NET SDK 9 and .NET Framework 4 developer pack
+- .NET SDK 10 and .NET Framework 4 developer pack
 - Zen Browser, Spotify, Notepad++ (dark mode / DarkModeDefault)
-- 1Password + CLI, Slack, Teams, Figma, Postman, Discord
-- 7zip, WireGuard, KeePassXC, PowerToys, mRemoteNG, mpv.net
+- Teams, Figma, Discord, Bruno
+- 7zip, WireGuard, KeePassXC, PowerToys, mRemoteNG, mpv.net, Docker Desktop
 
-SQL Server Express instead of Developer: in `setup.ps1`, change `Microsoft.SQLServer.2022.Developer` to `Microsoft.SQLServer.2022.Express`.
+SQL Server Express instead of Developer: in `setup.ps1`, change `Microsoft.SQLServer.2025.Developer` to `Microsoft.SQLServer.2025.Express`.
 
 ### WSL2 + NixOS
 
