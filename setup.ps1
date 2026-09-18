@@ -218,14 +218,12 @@ Install-WingetPackage -Id 'Figma.Figma'
 Install-WingetPackage -Id 'Microsoft.Teams'
 Install-WingetPackage -Id '7zip.7zip'
 Install-WingetPackage -Id 'Microsoft.DotNet.Framework.DeveloperPack_4'
-Install-WingetPackage -Id 'Microsoft.DotNet.SDK.9'
+Install-WingetPackage -Id 'Microsoft.DotNet.SDK.10'
 Install-WingetPackage -Id 'Microsoft.Azure.FunctionsCoreTools'
 Install-WingetPackage -Id 'Microsoft.AzureCLI'
 Install-WingetPackage -Id 'Microsoft.AzureVPNClient'
 Install-WingetPackage -Id 'GitHub.cli'
-Install-WingetPackage -Id 'SlackTechnologies.Slack'
-Install-WingetPackage -Id 'AgileBits.1Password'
-Install-WingetPackage -Id 'Postman.Postman'
+Install-WingetPackage -Id 'Bruno.Bruno'
 
 # --- Preference ---
 Install-WingetPackage -Id 'Spotify.Spotify'
@@ -235,9 +233,10 @@ Install-WingetPackage -Id 'mRemoteNG.mRemoteNG'
 Install-WingetPackage -Id 'Discord.Discord'
 Install-WingetPackage -Id 'WireGuard.WireGuard'
 Install-WingetPackage -Id 'KeePassXCTeam.KeePassXC'
-Install-WingetPackage -Id 'AgileBits.1Password.CLI'
 Install-WingetPackage -Id 'mpv.net'
 Install-WingetPackage -Id 'Microsoft.PowerToys'
+Install-WingetPackage -Id 'BillStewart.SyncthingWindowsSetup'
+Install-WingetPackage -Id 'Docker.DockerDesktop'
 
 Enable-NotepadPlusPlusDarkMode
 
