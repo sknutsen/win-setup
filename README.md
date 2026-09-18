@@ -1,10 +1,10 @@
 # Windows workstation setup
 
-PowerShell bootstrap for a fresh Windows install. It installs the usual Windows apps with winget, enables **WSL2**, imports **NixOS-WSL**, and applies [sknutsen/nixconf](https://github.com/sknutsen/nixconf) as `nixosConfigurations.wsl`.
+PowerShell bootstrap for a fresh **Windows 11+** install. It installs the usual Windows apps with winget, applies personalization (theme / taskbar), enables **WSL2**, imports **NixOS-WSL**, and applies [sknutsen/nixconf](https://github.com/sknutsen/nixconf) as `nixosConfigurations.wsl`.
 
 ## Prerequisites
 
-- Windows 10 (recent) or Windows 11
+- **Windows 11 or later** (build 22000+)
 - An administrator account (UAC is fine; the script self-elevates)
 - Internet
 - **Virtualization enabled in firmware** (Intel VT-x / AMD-V). WSL2 will fail if this is off
@@ -31,6 +31,7 @@ The first NixOS rebuild from GitHub can take a long time.
 | --- | --- |
 | `-SkipWsl` | Windows apps only; no WSL / NixOS |
 | `-SkipNixFlake` | Install the stock NixOS-WSL distro, but do not apply `nixconf` |
+| `-SkipPersonalization` | Skip theme / taskbar registry tweaks |
 | `-Resume` | Used after the WSL reboot; you do not need to pass this yourself |
 
 ## What gets installed
@@ -40,14 +41,26 @@ The first NixOS rebuild from GitHub can take a long time.
 - Git, GitKraken, GitHub CLI
 - Visual Studio 2026 Enterprise (Managed Desktop, ASP.NET, Azure, Data workloads + recommended components + WCF tooling)
 - Claude Code
-- SQL Server 2025 **Developer** (full engine, not for production) and SSMS 22
+- SQL Server 2025 **Developer** (full engine, not for production), SSMS 22, and Power BI Desktop
 - Azure CLI, Azure VPN Client, Azure Functions Core Tools
 - .NET SDK 10 and .NET Framework 4 developer pack
-- Zen Browser, Spotify, Notepad++ (dark mode / DarkModeDefault)
-- Teams, Figma, Discord, Bruno
-- 7zip, WireGuard, KeePassXC, PowerToys, mRemoteNG, mpv.net, Docker Desktop
+- Zen Browser, Helium, Spotify, Notepad++ (dark mode / DarkModeDefault)
+- Teams, Figma, Bruno
+- 7zip, WireGuard, Tailscale, KeePassXC, PowerToys, mRemoteNG, TeamViewer, mpv.net, Docker Desktop
 
 SQL Server Express instead of Developer: in `setup.ps1`, change `Microsoft.SQLServer.2025.Developer` to `Microsoft.SQLServer.2025.Express`.
+
+### Personalization (Windows 11)
+
+Editable `$Personalization` hashtable near the top of `setup.ps1`. Defaults:
+
+- Dark theme (apps + system), blue accent (`#0078D4`), no transparency
+- Taskbar left-aligned, search hidden, never combine/group apps, small buttons
+- Multi-monitor: show taskbar apps on main taskbar and where the window is open
+- Hide Task View, Widgets, and Chat/Copilot
+- Night Light always on (00:00–23:59 schedule + forced active)
+- Start: hide recently added, most used, recommended files, and recommendations
+- Start: show Settings and File Explorer next to the power button
 
 ### WSL2 + NixOS
 
